@@ -1,0 +1,345 @@
+<html>
+<head>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+*{
+    box-sizing: border-box;
+}
+html,body{
+    overflow-x: hidden;
+    height:100%;
+}
+body {
+    padding: 0;
+    margin:0;
+    background:#FFF0F5;
+}
+.header {
+   position:fixed;
+   background-color:#DB7093;
+   width: 100%;
+   height: 60px;
+   position:fixed;
+   z-index:10; 
+   text-align: center;
+   text-indent:40px;
+   color:white;
+    }
+.main {
+    background:#FFF0F5;
+    width:cover;
+    margin-top: 60px;
+    padding: 10px 50px;
+}
+#sidebarMenu {
+    height:90%;
+    position:absolute;
+    overflow-y:scroll;
+    width: 200px;
+    margin-top:60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background:#FFE4E1;
+}
+  .menu{
+     list-style:none; 
+     padding:5px;
+     box-sizing:border-box;
+     text-align:center;
+     margin-top:0px;
+    }
+.menu li a{
+    display: block;
+    height:cover;
+    width:cover;
+    font-size:15px;
+    line-height:40px;
+    text-decoration:none;
+    color:white;
+    padding-left:10px;
+    box-sizing: border-box;
+    margin-top:12px;
+    box-shadow:-1px -1px #FFB6C1;
+    transition: 0.4s;
+    background:#DB7093;
+}
+ul li:hover a{
+ padding-left:20px;
+ color:black;
+ background:#FFB6C1;
+ box-shadow:inset -1px -1px #DB7093;
+}
+#openSidebarMenu:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input#openSidebarMenu{
+    display: none;
+}
+.sidebarIconToggle {
+  height: 22px;
+    width: 22px;
+    position:fixed;
+    z-index: 99;
+    top: 22px;
+    left: 15px;
+    transition: all 0.3s;
+    cursor: pointer; 
+}
+.spinner {
+    height:3px;
+    background-color: #fff;
+    transition: all 0.3s;
+
+}
+.spinner.middle ,
+.spinner.bottom{
+    margin-top: 3px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.middle {
+    opacity: 0;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.top {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.bottom {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+ 
+.sidebar header p {
+  padding: 15px;
+}
+ #img {
+  width: 120px;
+  height:120px;
+  color:green;
+  margin-top:5px;
+  margin-left:30px;
+}
+ footer{
+   padding: 10px 10px 0px 10px; 
+   width:cover; 
+   height:85%; 
+   background:#DB7093;
+    } 
+  #h3{
+      color:white;
+      font-variant:small-caps;
+      font-size:150%;
+      margin-top:5px;
+      margin-bottom:10px;
+     }
+ .hw{
+     color:ivory;
+     margin-top:-5px;
+     text-align:justify;
+     text-indent:30px;
+     line-height:28px;
+     text-transform:capitalize;
+   }
+ .main2{
+  width:100%;
+  height:40%;
+  overflow: hidden;
+  background-color:#FFE4E1;
+  border-radius: 7px;
+  box-shadow:-2px -2px #FFC0CB ;
+  box-shadow:inset-2px -2px #FFC0CB;
+   }
+.fa{
+   margin-top:4px;
+   margin-bottom:-2px;
+   }
+   
+#img2{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 
+    0px 0px 2px #5f5f5f,
+    0px 0px 0px 7px #ecf0f3,
+    8px 8px 15px #a7aaaf,
+    -8px -8px 15px #ffffff
+    ;
+    float:left;
+    margin-top:10px;
+    margin-left:10px;
+    margin-right:20px;
+    margin-bottom:10px;
+    display:block;
+    }   
+  .fa-envelope{
+    font-size:100%;
+    padding-bottom:10px;
+    padding-right:10px;
+    color:#20B2AA;
+      }
+   .fa-instagram {
+   background:white;
+   color:#DB7093;
+   margin-right:5px;
+   padding:5px;
+   }
+   /* Instragram */
+   .fa-github {
+   margin-left:5px;
+   background:white;
+   color:black;
+   margin-right:5px;
+   padding:5px;
+
+   }
+   /* Github */
+   .fa-snapchat{
+   background:yellow;
+   color:black;
+   margin-right:5px; 
+   padding:5px;
+   }
+   /* Instragram */
+   .fa-whatsapp{
+   background:green;
+   color: white;
+   padding:5px;
+   }
+  .fa-envelope:hover,
+  .fa-instagram:hover,
+  .fa-github:hover,
+  .fa-snapchat:hover,
+  .fa-whatsapp:hover{
+               color:skyblue;
+               padding:7px;
+                     }
+ /*.fa-instagram:hover {color:; padding:7px;}
+   .fa-github:hover {color:;  padding:7px;}
+   .fa-snapchat:hover {color:;  padding:7px;}
+   .fa-whatsapp:hover {color:;  padding:7px;}*/
+ #btn2{
+      padding:10px;
+      margin-top:15px;
+      font-variant:small-caps;
+      text-transform:capitalize;
+      color:#DB7093;
+      font-weight:bold;
+      font-size:20px;
+      word-spacing:10px; 
+      border:none;
+      border-radius:5px;
+      background-color:#FFFAFA;
+      }
+ #qut{
+      background-color:#FFFAFA;
+      border-radius:5%;
+      margin-top:40px;
+      margin-bottom:40px;
+      padding:2%;
+      word-spacing:10px;
+      font-family:times new ronan;
+      text-transform:capitalize;
+      text-indent:10%;
+      color:#800080;
+      box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+     }
+</style>
+</head>
+<body>
+<div class="header">
+<h2>Welcome to the HTML World</h2>
+</div>
+    <input type="checkbox" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner top"></div>
+        <div class="spinner middle"></div>
+        <div class="spinner bottom"></div>
+    </label>
+    <div id="sidebarMenu">
+    <img src="/storage/emulated/0/Pictures/Html.jpg" id="img" alt="html5 logo">
+      <center><b>The Skeleton of Webpage</b></center>
+        <ul class="menu">
+            <li><a href="sb.html">HTML</a></li>
+            <li><a href="#">HTML Skeletan</a></li>
+            <li><a href="#">HTML Element Types</a></li>
+            <li><a href="#">HTML Comment</a></li>
+            <li><a href="#">HTML Self-Closing Tag</a></li>
+            <li><a href="#">HTML Atributes</a></li>
+            <li><a href="#">HTML Headings</a></li>
+            <li><a href="#">HTML Text Formating</a></li>
+            <li><a href="#">HTML Font</a></li>
+            <li><a href="#">HTML Paragraph</a></li>
+            <li><a href="#">HTML Pre</a></li>
+            <li><a href="#">HTML Marquee</a></li>
+            <li><a href="#">HTML Quotations </a></li>
+            <li><a href="#">HTML Marquee</a></li>
+            <li><a href="#">HTML Images</a></li>
+            <li><a href="#" >HTML Mediya</a></li>
+            <li><a href="#">HTML Links</a></li>
+            <li><a href="">HTML List</a></li>
+            <li><a href="#">HTML Table</a></li>
+            <li><a href="#">HTML Form</a></li>
+        </ul></div>
+        </div>
+    </div>
+    <div class="main">
+        <h3 style="color:#800080;">Hello HTML Learner</h3>
+     <b style="text-indent:30px;color:#DB7093;">Welcome! You have found the best Way to Learn HTML.</b>
+         <p style="font-variant:small-caps;text-indent:40px;text-align:justify;">html is hyper text  markup language use for defines a structure of Webpage
+          on Website.</p> 
+         <div id="qut">
+           <q>think of a website as a human body.html is the skeletan (structure),
+           css is the skin (appearness) and javascript is the muscles and organs (functionality)
+           that makes that whole thing operate.</q>
+          <br>
+          <img src="/storage/emulated/0/Pictures/1656990555552.jpg" style="width:cover;">
+         </div>
+        <p style="font-variant:small-caps;text-indent:40px;text-align:justify;">Let's start first step of web-developing  learning journy with Html World.
+        here beginers learn all basics of html element with syntax and example.</p>
+     <center> 
+     <button id="btn2">Lets Start Learning Now</button> 
+      </center> 
+    </div>
+    </div>
+      <footer>
+      <div>
+   <center><h3 id="h3">Html World</h3></center>
+      <div class="hw">
+      <p><b>html world</b> is learning website
+      created for bigginers to learn html.
+      which is first step of there web-disgining learning journy here each
+      html content is described step by 
+      step with example in easiat way.
+      i hope that this will enspire to 
+      my html learner...</p>
+      </div>
+      <div>
+     <center><h3 id="h3">Outline</h3></center>
+   <main class="main2">
+   <img src="image.jpg" alt="its me!" id="img2" >   
+   <h4 style="margin-top:5px;margin-bottom:5px;text-align:center;font-family:times new roman;text-transform:uppercase;font-weight:bold;color:#8B008B;">rajput neha</h4>
+    <b style="margin-top:2px;font-variant:small-caps;font-size:120%;color:#C71585;">hii there!</b>
+   <p style="margin-top:5px;text-transform:capitalize;text-indent:10px;line-height:20px;margin-bottom:5px;">i am neha. student of BCA in rcpet's imrd
+     shirpur. intrested todays grooming IT industry. </p>
+   <center>
+ <a href="mailto:rajput.nj2003@gmail.com" style="text-decoration:none;color:#8B008B;"><i class="fa fa-envelope"> Email </i>rajput.nj2003@gmail.com</a>
+ <div class="fa">
+ <b style="color:#C71585;text-transform:capitalize;font-size:18px;">follow me!</b>
+ <a href="#"><i class="fa fa-github"></i></a></li>
+ <a href="#"><i class="fa fa-instagram"></i></a>
+ <a href="#"><i class="fa fa-snapchat"></i></a>
+ <a href="#"><i class="fa fa-whatsapp"></i></a>
+ </div></center></main></div></div>
+<strong>if you be a master in html start learning css and then... javascript...be a webmaster</strong>
+ </footer>
+ </body>
+ </html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
