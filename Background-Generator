@@ -1,0 +1,169 @@
+<html>
+
+  <head>
+
+  <title>Background Color Generator</title>
+
+    <style type="text/css">
+
+    #rb{
+
+    text-align:center;
+
+    font-family:cursive;
+
+    font-size:20px;
+
+    text-shadow:5px;
+
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+
+    color: transparent;
+
+    -webkit-background-clip: text;
+
+    }
+
+    .wrap{
+
+    width:300px;
+
+    margin-left:25px;
+
+    background:linear-gradient(
+
+    to right bottom,
+
+    rgba(255, 255, 255, 0.7),
+
+    rgba(255, 255, 255, 0.3)
+
+    );
+
+    border-radius:15px;
+
+    }
+
+    button{
+
+    background:linear-gradient(
+
+    to right bottom,
+
+    rgba(255, 255, 255, 0.7),
+
+    rgba(255, 255, 255, 0.3)
+
+    );;
+
+    border:none;
+
+    margin-right:5px;
+
+    width:15%;
+
+    border-radius:5px;
+
+    margin-left:12%;    
+
+    margin-top:2%;
+
+    margin-bottom:2%;
+
+    font-family:cursive;
+
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+
+    color: transparent;
+
+    -webkit-background-clip:text;
+
+    }
+
+    </style>  
+
+  </head>
+
+  <body>
+
+    <h4 id="rb">RainBow Background Color Generator</h4>
+
+    <div class="wrap">
+
+    <button id="btn1">Red</button>
+
+    <button id="btn2">Orange</button> 
+
+    <button id="btn3">Yellow</button>
+
+    <br>
+
+    <button id="btn4">Green</button>
+
+    <button id="btn5">Blue</button> 
+
+    <button id="btn6">Indigo</button>
+
+    <br>
+
+    <button id="btn7" style="margin-left:30%;">Violet</button>
+
+    <button id="btn8">Clear</button>
+
+    </div>
+
+  </body>
+
+</html>
+
+<script type="text/javascript">
+
+ btn = document.getElementById('btn1'); 
+
+btn.addEventListener('click', function onClick(event) {
+
+document.body.style.backgroundColor = 'Red';});
+
+btn = document.getElementById('btn2'); 
+
+btn.addEventListener('click', function onClick(event) {
+
+document.body.style.backgroundColor = 'Orange';});
+
+btn = document.getElementById('btn3'); 
+
+btn.addEventListener('click', function onClick(event) {
+
+document.body.style.backgroundColor = 'Yellow';});
+
+btn = document.getElementById('btn4'); 
+
+btn.addEventListener('click', function onClick(event) {
+
+document.body.style.backgroundColor = 'Green';});
+
+btn = document.getElementById('btn5'); 
+
+btn.addEventListener('click', function onClick(event) {
+
+document.body.style.backgroundColor = 'Blue';});
+
+btn = document.getElementById('btn6'); 
+
+btn.addEventListener('click', function onClick(event) {
+
+document.body.style.backgroundColor = 'Indigo';});
+
+btn = document.getElementById('btn7'); 
+
+btn.addEventListener('click', function onClick(event) {
+
+document.body.style.backgroundColor = 'Violet';});
+
+btn = document.getElementById('btn8');
+
+btn.addEventListener('click', function onclick(event){
+
+document.body.style.backgroundColor='White';});
+
+</script>
