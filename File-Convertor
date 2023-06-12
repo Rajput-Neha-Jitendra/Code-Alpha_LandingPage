@@ -1,0 +1,85 @@
+<html>
+
+<head>
+
+	<title>HTML To PDF Convertor</title>    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js" ></script>
+
+</head>
+
+<body>
+
+<center>
+
+    <div>
+
+      <h2>Webpage ... To ... PDF ... Convertor</h2>
+
+          <b>Webpage</b>
+
+		<p>A web page or webpage is a document, commonly written in HTML,
+
+			 that is viewed in an Internet browser.</p>
+
+        <hr>
+
+		<b>HTML</b>
+
+        <p>HTML stands for Hyper Text Markup Language.
+
+	   <br> HTML is the standard markup language for creating Web pages.</p>
+
+	   <hr>
+
+	   <b>PDF</b>
+
+	   <p>PDF - Portable Document Format<br>A portable Document Format is
+
+	    used to share and save documents in a format accessible from any 
+
+		computer or device.</p>
+
+	    <br>
+
+		<h3>Webpage <br> || <br> To<br> || <br> PDF</h3>
+
+        <h4>This Webpage Should Show up in PDF</h1>
+
+<a href="javascript:generatePDF()" id="downloadButton">Click to download</a>
+
+    </div>
+
+	</center>
+
+    <script>
+
+        async function generatePDF() {
+
+            document.getElementById("downloadButton").innerHTML = "Currently downloading, please wait";
+
+            var downloading = document.getElementById("whatToPrint");
+
+            var doc = new jsPDF('l', 'pt');
+
+            await html2canvas(downloading, {
+
+            width: 530
+
+            }).then((canvas) => {
+
+           doc.addImage(canvas.toDataURL("image/png"), 'PNG', 5, 5, 500, 200);
+
+            })
+
+            doc.save("Document.pdf");
+
+                document.getElementById("downloadButton").innerHTML = "Click to download";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
